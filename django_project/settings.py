@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import stripe
+import os
 
 stripe.api_key = 'sk_test_51PRCKrP9Z7bBYKiNElNAUE1MOwnu9wIR5qydgHocTEatmQWeexa0jXv1MBQAOoS4PrYbVSyEAq6VPhVlIElPas1a00yHedNgVH'
 
