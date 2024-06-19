@@ -38,3 +38,12 @@ def process_payment(request):
         except stripe.error.StripeError:
             return HttpResponse('Payment failed')
     return render(request, 'gym/process_payment.html')
+
+def about(request):
+    return render(request, 'gym/about.html')
+
+def contact(request):
+    if request.method == 'POST':
+        # Handle form submission
+        return HttpResponse('Thank you for your message.')
+    return render(request, 'gym/contact.html')
