@@ -4,9 +4,15 @@
 
 {% block content %}
 <h2>Our Classes</h2>
+<p>We offer a variety of fitness classes to help you stay fit and healthy. Check out our class offerings below and book a session today!</p>
 <ul>
     {% for class in classes %}
-    <li>{{ class.name }} - <a href="{% url 'book_class' class.id %}">Book</a></li>
+    <li>
+        <h3>{{ class.name }}</h3>
+        <p>{{ class.description }}</p>
+        <p>Schedule: {{ class.schedule }}</p>
+        <a href="{% url 'book_class' class.id %}">Book</a>
+    </li>
     {% endfor %}
 </ul>
 {% endblock %}
